@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="ex01.Controller">
+   <children>
+      <AnchorPane layoutX="-20.0" layoutY="-21.0" prefHeight="250.0" prefWidth="400.0">
+         <children>
+            <Label layoutX="66.0" layoutY="63.0" />
+            <HBox alignment="CENTER_LEFT" layoutX="22.0" layoutY="35.0" prefHeight="55.0" prefWidth="400.0" spacing="35.0">
+               <children>
+                  <Label text="성  별">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="rdoWoman" mnemonicParsing="false" text="여성">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gender" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoMan" mnemonicParsing="false" text="남성" toggleGroup="$gender">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="22.0" layoutY="90.0" prefHeight="55.0" prefWidth="400.0" spacing="35.0">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <children>
+                  <Label text="취  미">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="chkMusic" mnemonicParsing="false" text="음악">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="chkSport" mnemonicParsing="false" text="스포츠">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="chkMovie" mnemonicParsing="false" text="영화">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="22.0" layoutY="146.0" prefHeight="55.0" prefWidth="400.0" spacing="10.0">
+               <children>
+                  <Label text="연령구분">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cmbAge" prefHeight="30.0" prefWidth="202.0" promptText="연령대 선택" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <Button layoutX="331.0" layoutY="202.0" mnemonicParsing="false" onAction="#viewProc" prefHeight="33.0" prefWidth="62.0" text="확 인">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
